@@ -8,6 +8,6 @@ public class Practice {
     public static void main(String[] args) {
         Stream<Integer> stream2 =
                 Stream.iterate(1, n -> n + 1);
-        stream2.collect(Collectors.toList()).forEach(System.out::println);
+        stream2.limit(10).collect(Collectors.toList()).forEach(System.out::println);
     }
 }
