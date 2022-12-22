@@ -10,7 +10,9 @@ public interface MyInterface1 {
 
 //    void print();
 
-    void test();
+   default void test() {
+       System.out.println("test");
+   };
 
     static void display() {
         System.out.println("MyInterface1 display");

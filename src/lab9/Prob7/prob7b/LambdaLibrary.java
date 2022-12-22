@@ -7,7 +7,7 @@ public class LambdaLibrary {
 
     public static final TriFunction<List<Employee>, Character, Integer, String> FILTERED_EMPLOYEES =
             (list, startWithChar, salaryCheck) -> list.stream()
-                    .filter(emp -> emp.getLastName().charAt(0) > 'M')
+                    .filter(emp -> emp.getLastName().charAt(0) > startWithChar)
                     .filter(emp -> emp.salary > 100000)
                     .map(Employee::getFullName)
                     .sorted()
